@@ -1,0 +1,27 @@
+<div class="title-block">
+  <h3 class="title">
+    Страница записей <span class="sparkline bar"></span>
+  </h3>
+</div>
+
+<section class="section" *ngIf="isLoaded; else isLoading">
+  <div class="row">
+    <div class="col-md-6">
+      <wfm-add-event></wfm-add-event>
+    </div>
+    <div class="col-md-6">
+      <wfm-add-category (byCategoryAdd)="newCategoryAdded($event)"></wfm-add-category>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <wfm-edit-category [categories]="categories" (editCategory)="onEditCategory($event)"></wfm-edit-category>
+    </div>
+  </div>
+</section>
+
+<ng-template #isLoading>
+  <section class="section text-center">
+    Loading
+  </section>
+</ng-template>

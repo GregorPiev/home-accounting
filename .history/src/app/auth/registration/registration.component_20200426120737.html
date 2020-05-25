@@ -1,0 +1,65 @@
+<p class="text-xs-center">SignUp in order get access</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="form-group"
+    [ngClass]="(form.get('email').invalid && form.get('email').touched) ? 'has-error' : 'has-success'">
+    <label for="email">Email</label>
+    <input formControlName="email" value="" type="text" class="form-control underlined" id="email"
+      placeholder="Enter email">
+  </div>
+  <div class="form-help-text" *ngIf="form.get('email').invalid && form.get('email').touched">
+    <span class="alert alert-danger" *ngIf="form.get('email').hasError('required')">Enter value</span>
+    <span class="alert alert-danger" *ngIf="form.get('email').hasError('email')">Invalid value</span>
+    <span class="alert alert-danger" *ngIf="form.get('email').hasError('forbidenEmail')">Email already exists</span>
+  </div>
+  <br/>
+
+
+
+
+  <div class="form-group"
+    [ngClass]="(form.get('password').invalid && form.get('password').touched) ? 'has-error' : 'has-success'">
+    <label for="password">Password</label>
+    <input formControlName="password" type="password" class="form-control underlined" id="password"
+      placeholder="Enter password">
+  </div>
+  <div class="form-heplp-text" *ngIf="form.get('password').invalid && form.get('password').touched">
+    <span class="alert alert-danger" *ngIf="form.get('password').hasError('required')">Enter email value</span>
+    <span class="alert alert-danger" *ngIf="form.get('password').hasError('password')">Invalid value</span>
+  </div>
+ <br/>
+
+  <div class="form-group"
+    [ngClass]="(form.get('name').invalid && form.get('name').touched) ? 'has-error' : 'has-success'">
+    <label for="name">Name</label>
+    <input type="text" formControlName="name" class="form-control underlined" id="name" placeholder="Enter name">
+  </div>
+  <div class="form-help-text" *ngIf="form.get('name').invalid && form.get('name').touched">
+    <span class="alert alert-danger" *ngIf="form.get('name').hasError('required')">Enter value</span>
+    <span class="alert alert-danger" *ngIf="form.get('name').hasError('minlength')">Invalid value</span>
+  </div>
+  <br/>
+
+  <div class="form-group"
+    [ngClass]="(form.get('agree').invalid && form.get('agree').touched) ? 'has-error' : 'has-success'">
+    <label for="agree">
+      <input formControlName="agree" class="checkbox" name="agree" id="agree" type="checkbox">
+      <span>Agree with rules</span>
+    </label>
+  </div>
+  <div class="form-help-text" *ngIf="form.get('agree').invalid && form.get('agree').touched">
+    <span class="alert alert-danger" *ngIf="form.get('agree').hasError('required')">Enter value</span>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-block btn-primary" [disabled]="form.invalid">SignUp</button>
+  </div>
+  <div class="form-group">
+    <p class="text-muted text-xs-center">
+      Have you account?
+      <a [routerLink]="'/ligin'">
+        Enter!
+      </a>
+    </p>
+  </div>
+</form>

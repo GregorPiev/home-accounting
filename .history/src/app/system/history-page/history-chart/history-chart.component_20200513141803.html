@@ -1,0 +1,21 @@
+<section class="section">
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <ngx-charts-pie-chart
+          [view]="[700, 400]"
+          [scheme]="colorScheme"
+          [results]="single"
+          [legend]="false"
+          [legendPosition]="legendPosition"
+          [labels]="true"
+          [doughnut]="true"
+          (select)="onSelect($event)"
+          (activate)="onActivate($event)"
+          (deactivate)="onDeactivate($event)"
+        >
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+  </div>
+</section>

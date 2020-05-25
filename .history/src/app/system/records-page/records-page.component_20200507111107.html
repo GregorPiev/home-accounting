@@ -1,0 +1,19 @@
+<div class="title-block">
+  <h3 class="title">
+    Страница записей <span class="sparkline bar"></span>
+  </h3>
+</div>
+
+<section class="section">
+  <div class="row">
+    <div class="col-md-6">
+      <wfm-add-event></wfm-add-event>
+    </div>
+    <div class="col-md-6">
+      <wfm-add-category (byCategoryAdd)="newCategoryAdded($event)"></wfm-add-category>
+    </div>
+  </div>
+  <div class="row">
+    <wfm-edit-category [categories]="categories" [isLoaded]="isLoaded"></wfm-edit-category>
+  </div>
+</section>

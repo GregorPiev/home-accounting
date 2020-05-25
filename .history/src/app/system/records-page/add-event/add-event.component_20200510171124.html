@@ -1,0 +1,55 @@
+<div class="card">
+  <div class="card-header bordered">
+    <div class="header-block">
+      <h3 class="title">Add event</h3>
+    </div>
+  </div>
+  <div class="card-block">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <div class="form-group">
+        <label class="control-label" for="category">Choose category</label>
+        <select
+          class="form-control"
+          #category
+          id="category"
+          name="category"
+          [ngModel]="1"
+          required
+        >
+          <option *ngFor="let c of categories" [value]="c.id"
+            >{{ c.name }}}}</option
+          >
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Choose type</label>
+        <div *ngFor="let t of types">
+          <label>
+            <input
+              class="radio"
+              name="radios"
+              type="radio"
+              [ngModel]="'outcome'"
+              [value]="t.type"
+            />
+            <span>{{ t.label }}</span>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="amount">Enter amount</label>
+        <input
+          type="number"
+          value="0"
+          id="amount"
+          name="amount"
+          class="form-control"
+          [ngModel]="1"
+          min="1"
+          #amount="ngModel"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Add to</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "wfm@mail.ru",
+      "password": "12345678",
+      "name": "Admin"
+    }
+  ],
+  "bill": {
+    "value": 98655,
+    "currency": "ILS"
+  },
+  "categories": [
+    {
+      "name": "Home",
+      "capacity": 15000,
+      "id": 1
+    },
+    {
+      "name": "Food",
+      "capacity": 10000,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Car",
+      "capacity": 7000
+    },
+    {
+      "name": "Gregory",
+      "capacity": 3500,
+      "id": 4
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "type": "income",
+      "amount": 1250,
+      "category": 2,
+      "date": "17.05.2020 19:49:02",
+      "description": "Gave food away"
+    },
+    {
+      "id": 2,
+      "type": "outcome",
+      "amount": 1300,
+      "category": 1,
+      "date": "17.05.2020 19:49:02",
+      "description": "Bought a dishwasher"
+    },
+    {
+      "type": "income",
+      "amount": 1480,
+      "category": 2,
+      "date": "20.05.2020 14:00:48",
+      "id": 3,
+      "description": "Campaign in okey with points. Free food"
+    },
+    {
+      "type": "outcome",
+      "amount": 2470,
+      "category": 2,
+      "date": "20.05.2020 14:00:58",
+      "id": 4,
+      "description": "Weekly purchase"
+    },
+    {
+      "type": "outcome",
+      "amount": 4000,
+      "category": 3,
+      "date": "21.05.2020 14:01:58",
+      "id": 5,
+      "description": "Refueling + maintenance passage"
+    },
+    {
+      "amount": 15,
+      "category": 4,
+      "date": "18.05.2020 12:43:44",
+      "description": "Testing 3",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 50,
+      "category": 4,
+      "date": "18.05.2020 12:48:20",
+      "description": "Testing 4",
+      "id": 7
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 3,
+      "date": "18.05.2020 17:12:39",
+      "description": "Testing 5",
+      "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 45,
+      "category": 4,
+      "date": "19.05.2020 15:04:09",
+      "description": "Splending",
+      "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 1500,
+      "category": 4,
+      "date": "19.05.2020 15:05:22",
+      "description": "Splending",
+      "id": 10
+    }
+  ]
+}
