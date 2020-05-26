@@ -9,7 +9,7 @@ import { HistoryDetailComponent } from './history-page/history-detail/history-de
 
 const routes: Routes = [
   {
-    path: 'system', component: SystemComponent, children: [
+    path: '', component: SystemComponent, children: [
       { path: 'bill', component: BillPageComponent },
       { path: 'history', component: HistoryPageComponent },
       { path: 'planning', component: PlanningPageComponent },
@@ -20,7 +20,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes)
+  ],
   exports: [RouterModule]
 })
 

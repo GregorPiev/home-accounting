@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { single } from './../../../../../.history/src/app/system/history-page/history-chart/history-chart.component_20200513131056';
+
 
 @Component({
   selector: 'wfm-history-chart',
