@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class BaseApi {
-  private baseUrl = 'http://localhost:3000/';
-  constructor(public http: HttpClient) {}
+  // private baseUrl = 'http://localhost:3000/';
+  private baseUrl = `${environment.baseUrl}`;
+  constructor(public http: HttpClient) { }
 
   private getUrl(url: string = ''): string {
     return this.baseUrl + url;
